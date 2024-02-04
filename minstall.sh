@@ -195,7 +195,12 @@ cd ..
 
 ### OSINT ###
 cd $HOME/TOOLS
+mkdir OSINT && cd OSINT
 git clone https://github.com/HowToFind-bot/osint-tools.git
+# or clone and install manually
+git clone https://github.com/soxoj/maigret && cd maigret
+pip3 install -r requirements.txt
+
 
 clear
 
@@ -213,7 +218,7 @@ cat << "EOF"
 2-CMS
  |-Droopescan                   Scanner CMS
   WORDPRESS
-  |-vane                                Wpscan like
+  |-vane                        Wpscan like
   JOOMLA
   |-Joomla-brute.py             Joomla login bruteforce
   |-JoomBrute                   quite same
@@ -254,8 +259,8 @@ cat << "EOF"
  |-Osint-tools                  300+tools
 8-PRIVESC
  |-net-creds                    sniff data from int or pcap
- |-CVE-2021-4034                        pkexec poc
- |-CVE-2021-3156                        sudo abuse
+ |-CVE-2021-4034                pkexec poc
+ |-CVE-2021-3156                sudo abuse
  |-dirty-cow                    dirtycow
   LIN
   |-Linux-exploit-suggester     Linux exploit sugg
@@ -280,9 +285,10 @@ cat << "EOF"
   USERNAMES
   |-username-anarchy            Create usernames with infos
   PASSWORDS
-  |-cupp                                Famous bro
-  |-rsmangler.rb                        manipulation on word, wordlists
+  |-cupp                        Famous bro
+  |-rsmangler.rb                manipulation on word, wordlists
   |-mentalist                   Graphic tool wordlist gen
 12-OSINT
   |-Osint tools                 300+
+  |-Maigret
 EOF
