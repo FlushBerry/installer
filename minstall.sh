@@ -193,54 +193,40 @@ wget https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.5/LaZagne.exe
 wget https://raw.githubusercontent.com/AlessandroZ/LaZagne/master/Linux/laZagne.py
 cd ..
 
+### OSINT ###
+cd $HOME/TOOLS
+git clone https://github.com/HowToFind-bot/osint-tools.git
 
 clear
 
 cat << "EOF"
-ALL
- |
+0-ALL
  |-PayloadAllTheThings          Bible bru
  |-Defaults                     $ creds search tomcat
-
-PRIVESC
- |
- |-net-creds                    sniff data from int or pcap
- |-CVE-2021-4034                pkexec poc
- |-CVE-2021-3156                sudo abuse
- |-dirty-cow                    dirtycow
- LIN
-  |-Linux-exploit-suggester     Linux exploit sugg
-  |-LinEnum                     Local linux enum & privesc
-  |-pspy                        spy ps
- WIN
-  |-PCredz                      Extract info such as Credt,NTLM,...
-  |-LogRotten                   Log rotate vuln
-  |-NoPac                       Special vuln
-  |-PrintNightmare              Special vuln
-  |-PetitPotam                  Special vuln
-
-AD
- |
+1-AD
  |-Linikatz
  |-SharpGPOAbuse                GPO_abuse
  |-Impacket-examples-windows    impacket_exe
  |-Snaffler                     find candy creds, ..
  |-NetExec                      New CrackMapExec
  |-linWinPwn                    Automate AD scanner
-
-LINUX
- |
- |-mimipenguin                  show credentials (admin)
- |-Crowbar                      bruteforce SSH Key
- |-linux-exploit-suggester      LINUX suggester
-
-SSL
- |
- |-shcheck                      check security attributes
- |-testssl                      test SSL vulnerabilities
-
-HTTP
- |
+2-CMS
+ |-Droopescan                   Scanner CMS
+  WORDPRESS
+  |-vane                                Wpscan like
+  JOOMLA
+  |-Joomla-brute.py             Joomla login bruteforce
+  |-JoomBrute                   quite same
+  |-Joomscan                    OWASP Joomla vuln scan
+  |-Joomlascan                  Find component in joomlaCMS
+  TOMCAT
+  |-cmd.jsp                     revshell
+  |-mgr_brute                   Brute creds tomcat
+3-DNS
+ |-DnsExfiltration              Dns Exfiltrator
+ |-DnsExfiltrator               Same but different
+ |-subbrute                     enum DNS records & subs
+4-HTTP
  |-interactsh                   OOB interaction gathering
  |-GWTMap                       GoogleWebToolkit Map
  |-4-ZERO-3                     403 bypass SH
@@ -249,53 +235,54 @@ HTTP
  |-phpbash.min.php              Rev shell cool
  |-phpbash.php
  |-reverse_shell_splunk         Rev shell splunk
- XSS
+  XSS
   |-XSStrike                    Cool XSS scanner
   |-BruteXSS                    bruteforce XSS
-LFI
- |-LFiFreak                     LFI exploiter bind/reverse shell
- |-LFISuite                     Automatic LFI (python relou)
- |-liffy                        LFI Tool
-
-WORDLISTS
- |
- USERNAMES
-  |-username-anarchy            Create usernames with infos
- PASSWORDS
-  |-cupp                        Famous bro
-  |-rsmangler.rb                manipulation on word, wordlists
-  |-mentalist                   Graphic tool wordlist gen
-
-CMS
- |
- |-Droopescan                   Scanner CMS
- WORDPRESS
-  |-vane                        Wpscan like
- JOOMLA
-  |-Joomla-brute.py             Joomla login bruteforce
-  |-JoomBrute                   quite same
-  |-Joomscan                    OWASP Joomla vuln scan
-  |-Joomlascan                  Find component in joomlaCMS
- TOMCAT
-  |-cmd.jsp                     revshell
-  |-mgr_brute                   Brute creds tomcat
-
-DNS
- |
- |-DnsExfiltration              Dns Exfiltrator
- |-DnsExfiltrator               Same but different
- |-subbrute                     enum DNS records & subs
-
-TUNNELING
- |
+ LFI
+  |-LFiFreak                    LFI exploiter bind/reverse shell
+  |-LFISuite                    Automatic LFI (python relou)
+  |-liffy                       LFI Tool
+5-LINUX
+ |-mimipenguin                  show credentials (admin)
+ |-Crowbar                      bruteforce SSH Key
+ |-linux-exploit-suggester      LINUX suggester
+6-OBFUSCATOR
+ |-Darkarmour                   Windows AV Evasion
+ |-Bashfuscator                 Bash fuscation framework linux cmd
+ |-Invoke-DOSfuscation          cmd.exe obf & detect
+7-OSINT
+ |-Osint-tools                  300+tools
+8-PRIVESC
+ |-net-creds                    sniff data from int or pcap
+ |-CVE-2021-4034                        pkexec poc
+ |-CVE-2021-3156                        sudo abuse
+ |-dirty-cow                    dirtycow
+  LIN
+  |-Linux-exploit-suggester     Linux exploit sugg
+  |-LinEnum                     Local linux enum & privesc
+  |-pspy                        spy ps
+  WIN
+  |-PCredz                      Extract info such as Credt,NTLM,...
+  |-LogRotten                   Log rotate vuln
+  |-NoPac                       Special vuln
+  |-PrintNightmare              Special vuln
+  |-PetitPotam                  Special vuln
+9-SSL
+ |-shcheck                      check security attributes
+ |-testssl                      test SSL vulnerabilities
+10-TUNNELING
  |-SocksOverRDP                 Socks4/5 over RDP/CITRIX/..
  |-ptunnel-ng                   TCP through ICMP
  |-chisel                       TCP/UDP tunnel over HTTP
  |-dnscat2                      DNS tunnel
  |-Ligolo-ng                    La base
-
-OBFUSCATOR
- |-Darkarmour                   Windows AV Evasion
- |-Bashfuscator                 Bash fuscation framework linux cmd
- |-Invoke-DOSfuscation          cmd.exe obf & detect
+11-WORDLISTS
+  USERNAMES
+  |-username-anarchy            Create usernames with infos
+  PASSWORDS
+  |-cupp                                Famous bro
+  |-rsmangler.rb                        manipulation on word, wordlists
+  |-mentalist                   Graphic tool wordlist gen
+12-OSINT
+  |-Osint tools                 300+
 EOF
