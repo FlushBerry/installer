@@ -105,6 +105,7 @@ git clone --depth 1 https://github.com/drwetter/testssl.sh.git
 #### HTTP ####
 cd $HOME/TOOLS
 mkdir http && cd http
+git clone https://github.com/PalindromeLabs/STEWS.git
 go install -v github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest
 git clone https://github.com/FSecureLABS/GWTMap.git
 git clone https://github.com/Dheerajmadhukar/4-ZERO-3.git
@@ -232,6 +233,7 @@ cat << "EOF"
  |-DnsExfiltrator               Same but different
  |-subbrute                     enum DNS records & subs
 4-HTTP
+ |-STEWS                        Websocket
  |-interactsh                   OOB interaction gathering
  |-GWTMap                       GoogleWebToolkit Map
  |-4-ZERO-3                     403 bypass SH
