@@ -26,6 +26,9 @@ cd $HOME
 mkdir TOOLS  && cd TOOLS
 
 
+git clone https://github.com/catsploit/catsploit.git
+git clone https://github.com/dwisiswant0/go-dork.git
+
 ####  WORDLISTS ####
 cd $HOME/TOOLS
 mkdir WORDLISTS && cd WORDLISTS
